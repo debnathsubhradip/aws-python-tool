@@ -1,8 +1,4 @@
-import boto3
-import os
-from dotenv import load_dotenv
-load_dotenv('variable.env')
-check=os.getenv("TEST")
+import subdir.control as control
 flag=1
 def options(argument):
     
@@ -12,8 +8,12 @@ def options(argument):
     }
     if argument=="all":
         return command
-    else:
-        return command.get(argument)
+    if argument=="exit":
+        exit(0)
+    elif argument=="1":
+        control.check_service()
+    # else:
+    #     return command.get(argument)
 
 def menu():
     while(flag!=0):
@@ -22,11 +22,10 @@ def menu():
         print('''
         |||\t\t\tAWS PYTHON TOOL\t\t\t||| 
         ''')
-        # print(menus['1'])
         for item in menus.keys():
             print("\t"+item+"\t:\t"+menus[item])
         command=input("\n\t|||\t"+"Enter Command"+"\t"+":")
-        print(options(command))
+        options(command)
 
 
 def nameCheck(name):
