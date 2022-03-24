@@ -1,7 +1,7 @@
 import boto3
 import os
 from dotenv import load_dotenv
-load_dotenv('keys.env')
+load_dotenv()
 accesskeyid=os.getenv("ACCESS-KEY-ID")
 secretaccesskey=os.getenv("SECRET-ACCESS-KEY")
 
