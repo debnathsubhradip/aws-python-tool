@@ -4,7 +4,8 @@ def options(argument):
     
     command={
         "exit":"Exit out of the program",
-        "1":"Check account details"
+        "1":"Check account details",
+        "2":"Check EC2 Details"
     }
     if argument=="all":
         return command
@@ -12,6 +13,8 @@ def options(argument):
         exit(0)
     elif argument=="1":
         control.check_service()
+    elif argument=="2":
+        control.check_ec2_service()
     # else:
     #     return command.get(argument)
 
