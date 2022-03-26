@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import subdir.control as control
 flag=1
 def options(argument):

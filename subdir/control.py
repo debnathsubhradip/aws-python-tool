@@ -114,7 +114,7 @@ def check_ec2_service():
             STOPPED EC2 \t=\t {return_response['ctr_stopped']}
             ''')
         except:
-            print(f"\t\tEITHER AUTHORIZATION FOR KEYS NOT AVAILABLE FOR REGION - {region} OR REGION {region} IS NOT ENABLED")
+            print(f"\t\tEITHER AUTHORIZATION FOR KEYS NOT AVAILABLE FOR REGION -\t{region}\t OR REGION\t{region}\t IS NOT ENABLED")
         return_response['ctr_pending']=0
         return_response['ctr_running']=0
         return_response['ctr_shutting_down']=0
